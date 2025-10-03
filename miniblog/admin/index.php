@@ -27,7 +27,7 @@ $total_categories = $pdo->query("SELECT COUNT(*) FROM categories")->fetchColumn(
     <div class="row mt-3">
         <!-- Total Users -->
         <div class="col-md-3 mb-3">
-            <div class="card text-white bg-primary">
+            <div class="card text-white bg-info">
                 <div class="card-body">
                     <h5 class="card-title">Users</h5>
                     <p class="card-text fs-3"><?= $total_users ?></p>
@@ -37,7 +37,7 @@ $total_categories = $pdo->query("SELECT COUNT(*) FROM categories")->fetchColumn(
 
         <!-- Total Posts -->
         <div class="col-md-3 mb-3">
-            <div class="card text-white bg-success">
+            <div class="card text-white bg-primary">
                 <div class="card-body">
                     <h5 class="card-title">Posts</h5>
                     <p class="card-text fs-3"><?= $total_posts ?></p>
@@ -68,9 +68,12 @@ $total_categories = $pdo->query("SELECT COUNT(*) FROM categories")->fetchColumn(
 
     <!-- Quick links -->
     <div class="mt-4">
-        <a href="users.php" class="btn btn-primary me-2">Manage Users</a>
+        <!-- Standout color for Manage Users -->
+        <a href="users.php" class="btn btn-info me-2">Manage Users</a>
+
+        <!-- Other buttons with intuitive colors -->
         <a href="posts.php" class="btn btn-primary me-2">Manage Posts</a>
-        <a href="categories.php" class="btn btn-secondary me-2">Manage Categories</a>
+        <a href="categories.php" class="btn btn-danger me-2">Manage Categories</a>
         <a href="tags.php" class="btn btn-success me-2">Manage Tags</a>
         <a href="../index.php" class="btn btn-dark">Go to Site</a>
     </div>
