@@ -1,0 +1,10 @@
+:root{
+--bg: #ffffff;
+--text: #222;
+}
+[data-theme='dark']{
+--bg: #121212;
+--text: #e6e6e6;
+}
+body{ background: var(--bg); color: var(--text); }
+.card{ transition: box-shadow .15s ease; }
